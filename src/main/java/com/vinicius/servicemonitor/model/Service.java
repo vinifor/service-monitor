@@ -5,15 +5,16 @@
  */
 package com.vinicius.servicemonitor.model;
 
-import lombok.Data;
-
 import java.time.LocalTime;
+import lombok.Builder;
+import lombok.Data;
 
 /**
  *
  * @author vinif
  */
 @Data
+@Builder(builderClassName = "Builder")
 public class Service {
 
     private String host;

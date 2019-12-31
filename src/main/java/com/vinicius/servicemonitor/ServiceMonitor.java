@@ -48,7 +48,7 @@ public class ServiceMonitor {
         }, service.getPollingFrequency() * 1000, service.getPollingFrequency() * 1000);
     }
 
-    private boolean checkService(Service service) {
+    public boolean checkService(Service service) {
         try (Socket s = new Socket(service.getHost(), service.getPort())) {
             return true;
         } catch (IOException ex) {
